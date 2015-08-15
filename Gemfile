@@ -44,5 +44,7 @@ group :development, :test do
 end
 
 gem 'puma'
+gem 'devise'
+gem 'faker'
 
 
