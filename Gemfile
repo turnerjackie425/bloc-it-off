@@ -53,5 +53,6 @@ gem 'puma'
 gem 'devise'
 gem 'faker'
 gem 'figaro', '1.0'
+gem 'newrelic_rpm'
 
 
