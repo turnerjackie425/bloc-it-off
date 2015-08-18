@@ -1,0 +1,6 @@
+<% if @todo_item.destroyed? %>
+  $('#todo_item-' +<%= @todo_item.id %>).hide();
+  $('.js-todo_items-count').html("<%= pluralize(@todo_item.user.todo_items.count, 'todo_item') %>");
+<% else %>
+  ('todo_item-' +<%= @todo_item.id %>).prepend("div class='alert alert-danger')<%= flash[:error] %></div>");
+<% end %>
