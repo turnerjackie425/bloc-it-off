@@ -18,6 +18,7 @@
         <td><%= link_to 'Show', todo_item %></td>
         <td><%= link_to 'Edit', edit_todo_item_path(todo_item) %></td>
         <td><%= link_to "Mark as complete/Delete", @todo_item, method: :destroy, class: 'glyphicon glyphicon-ok' %></td>
+        <td><%= @todo_item.days_left %> </td>
       </tr>
     <% end %>
   </tbody>
