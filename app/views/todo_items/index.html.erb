@@ -14,15 +14,17 @@
   <tbody>
     <% @todo_items.each do |todo_item| %>
       <tr>
-        <td><%= todo_item.title %></td>
-        <td><%= todo_item.description %></td>
-        <td><%= link_to 'Show', todo_list %></td>
+        <td><%= todo_item %></td>
+        <td><%= link_to 'Show', todo_item %></td>
         <td><%= link_to 'Edit', edit_todo_item_path(todo_item) %></td>
-        <td><%= link_to 'Destroy', todo_item, method: :delete, remote: true, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to "Mark as complete/Delete", @todo_item, method: :destroy, class: 'glyphicon glyphicon-ok' %></td>
       </tr>
     <% end %>
   </tbody>
 </table>
 
 <br>
+
+<%= link_to 'New Todo Item', new_todo_item_path %>
+
 

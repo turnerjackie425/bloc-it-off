@@ -10,12 +10,10 @@
   <%= @todo_item.description %>
 </p>
 
-<div id="todo_items_wrapper">
-  <%= render "todo_items/todo_item"%>
-  <div id="form">
-    <%= render "todo_items/form" %>
-  </div>
-</div>
+<p>
+  <strong>Days Remaining</strong>
+  <%= @todo_item.days_left %>
+</p>
 
 <%= link_to 'Edit', edit_todo_item_path(@todo_item) %> |
 <%= link_to 'Back', todo_items_path %>
