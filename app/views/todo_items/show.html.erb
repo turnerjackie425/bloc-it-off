@@ -2,12 +2,12 @@
 
 <p>
   <strong>Title:</strong>
-  <%= @todo_list.title %>
+  <%= @todo_item.title %>
 </p>
 
 <p>
   <strong>Description:</strong>
-  <%= @todo_list.description %>
+  <%= @todo_item.description %>
 </p>
 
 <div id="todo_items_wrapper">
@@ -17,5 +17,5 @@
   </div>
 </div>
 
-<%= link_to 'Edit', edit_todo_list_path(@todo_list) %> |
-<%= link_to 'Back', todo_lists_path %>
+<%= link_to 'Edit', edit_todo_item_path(@todo_item) %> |
+<%= link_to 'Back', todo_items_path %>
