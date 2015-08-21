@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+
   devise_for :users 
   
   resources :todo_items do
@@ -8,8 +9,8 @@ Rails.application.routes.draw do
     resources :users, only: [:show]
   end
 
-  root "todo_items#index"
+  root "welcome#index"
 
-  get 'about' => 'todo_items#about'
+  get 'about' => 'welcome#about'
   
 end
