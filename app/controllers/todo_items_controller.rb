@@ -31,6 +31,8 @@ class TodoItemsController < ApplicationController
     redirect_to todo_items_path
   end
 
+  def about
+  end
 
   private
 

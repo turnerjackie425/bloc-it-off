@@ -9,5 +9,7 @@ Rails.application.routes.draw do
   end
 
   root "todo_items#index"
+
+  get 'about' => 'todo_items#about'
   
 end

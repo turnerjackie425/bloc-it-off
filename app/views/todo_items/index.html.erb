@@ -1,12 +1,10 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Todo Items</h1>
+<h1>Todo Items:</h1>
 
 <table>
   <thead>
     <tr>
-      <th>Title</th>
-      <th>Description</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -15,7 +13,6 @@
     <% @todo_items.each do |todo_item| %>
       <tr>
         <td><%= todo_item.content %></td>
-        <td><%= link_to 'Show', todo_item %></td>
         <td><%= link_to 'Edit', edit_todo_item_path(todo_item) %></td>
         <td><%= link_to "Item Completed/Delete", todo_item, method: :delete, class: 'glyphicon glyphicon-ok' %></td>
         <td><%= todo_item.days_left %> </td>
