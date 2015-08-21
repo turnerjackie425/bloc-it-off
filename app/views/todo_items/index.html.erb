@@ -14,11 +14,11 @@
   <tbody>
     <% @todo_items.each do |todo_item| %>
       <tr>
-        <td><%= todo_item %></td>
+        <td><%= todo_item.content %></td>
         <td><%= link_to 'Show', todo_item %></td>
         <td><%= link_to 'Edit', edit_todo_item_path(todo_item) %></td>
-        <td><%= link_to "Item Completed/Delete", @todo_item, method: :destroy, class: 'glyphicon glyphicon-ok' %></td>
-        <td><%= @todo_item.days_left %> </td>
+        <td><%= link_to "Item Completed/Delete", todo_item, method: :delete, class: 'glyphicon glyphicon-ok' %></td>
+        <td><%= todo_item.days_left %> </td>
       </tr>
     <% end %>
   </tbody>
